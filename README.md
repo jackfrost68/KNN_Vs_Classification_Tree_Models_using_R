@@ -26,10 +26,6 @@ After standardizing the remaining numerical variables, setting seed to 1234, and
 
 From it, we can infer that my model predicted 386 times when Forest Cover type 1 was and was actually the correct Forest Cover Type in the observations split of the testing dataset. On the flip side, we can infer that the number of times my model predicted forest cover type 7 as it was in the test split, was 624. 
 
-<p align="center">
-  <img width="600" height="200" src="https://github.com/jackfrost68/KNN_Vs_Classification_Tree_Models_using_R/blob/dcac746b6a10f4df83b27f2b74fdc24c26aaaf12/KNN%20CrossVal.png">
-</p>
-
 <ins>*KNN Performance Evaluation:*</ins> 
 
 After running my model, I calculated the accuracy rate - how often my model predicted the cover type correctly. The KNN model predicted a  75% accuracy rate and a 25% error rate. To further evaluate this, I used a benchmark error rate - the rate at which one would blindly predict the cover type without the help of a model - which came up to 86%. 
@@ -105,6 +101,7 @@ Pros:
 Cons:
 1. As the tree grows in size, it becomes prone to overfitting and requires pruning.
 2. A small change in the data set can make tree structure unstable and cause variance. 
+
 
 <ins>*Which model is better?*</ins>  
 The KNN model brought down the error rate by 75% from the benchmark error as compared to the CART model accounting for an error rate by 77% from the benchmark error. Thus, it is observed that classification tree model is more accurate as compared to KNN model to predict the forest cover type on the test data available.
