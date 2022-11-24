@@ -57,12 +57,35 @@ After standardizing the remaining numerical variables and converting the categor
 
 From it, we can infer that my model predicted 549 times when Forest Cover type 1 was and was actually the correct Forest Cover Type in the observations split of the testing dataset. On the flip side, we can infer that the number of times my model predicted forest cover type 7 as it was in the test split, was 819. 
 
-<ins>*CART Performance Evaluation*</ins> 
+<ins>*CART Performance Evaluation:*</ins> 
 After running my model, I calculated the accuracy rate - how often my model predicted the cover type correctly. The CART model predicted a  77% accuracy rate and a 22% error rate. To further evaluate this, I used a benchmark error rate - the rate at which one would blindly predict the cover type without the help of a model - which came up to 86%. 
 
 ![This is an image]()
 
 The accuracy of the model on the test data is better when the tree is pruned, which means that the pruned decision tree model generalizes well and is more suited. However, there are also other factors that can influence decision tree model creation, such as building a tree on an unbalanced class. These factors were not accounted for in this demonstration but it's very important for them to be examined during a live model formulation.
 
+<ins>*Pros and Cons of the KNN and CART Model:*</ins> 
+
+*KNN Model*
+Pros:
+1. KNN is easy to implement as it takes two parameters i.e k and distance function.
+2. Since the KNN algorithm requires no training before making predictions, new data can be added seamlessly which will not impact the accuracy of the algorithm.
+
+
+Cons:
+1. One needs to do feature scaling (standardization and normalization) before applying KNN algorithm to any dataset. If not, KNN may generate wrong predictions.
+
+*CART Model*
+Pros: 
+1. Trees can be displayed graphically and can be easily interpreted by non-experts.
+2. Decision trees can easily handle qualitative (categorical) features without the need to create dummy variables.
+
+
+Cons:
+1. As the tree grows in size, it becomes prone to overfitting and requires pruning.
+2. A small change in the data set can make tree structure unstable and cause variance. 
+
+<ins>*Which model is better?*</ins>  
+The KNN model brought down the error rate by 75% from the benchmark error as compared to the CART model accounting for an error rate by 77% from the benchmark error. Thus, it is observed that CART model is more accurate as compared to KNN model to predict the forest cover type on the test data available.
 
 
